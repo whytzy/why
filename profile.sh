@@ -70,6 +70,7 @@ vless_tls_v2ray_status=$(systemctl status v2ray@vless | grep Active | awk '{prin
 vless_nontls_v2ray_status=$(systemctl status v2ray@vnone | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ssr_status=$(systemctl status ssrmu | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 status_virus_trojan=$(systemctl status v2ray@trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trojan_service=$(systemctl status v2ray@trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 stunnel_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -318,7 +319,6 @@ echo -e "V2Ray TLS   : $status_tls_v2ray"
 echo -e "V2Ray HTTP  : $status_nontls_v2ray"
 echo -e "Vless TLS   : $status_tls_vless"
 echo -e "Vless HTTP  : $status_nontls_vless"
-echo -e "SS HTTP     : $status_ss_http"
 echo -e "Trojan      : $status_virus_trojan"
 echo -e "Wireguard   : $status_wg"
 echo "------------------------------------------------------------------------
