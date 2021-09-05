@@ -69,7 +69,7 @@ nontls_v2ray_status=$(systemctl status v2ray@none | grep Active | awk '{print $3
 vless_tls_v2ray_status=$(systemctl status v2ray@vless | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 vless_nontls_v2ray_status=$(systemctl status v2ray@vnone | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ssr_status=$(systemctl status ssrmu | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-trojan_server=$(systemctl status trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trojan_server=$(systemctl status v2ray@trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 stunnel_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -286,8 +286,6 @@ echo -e "System Status / System Information :$y"
 echo -e "Uptime      : $uptime ( From VPS Booting )"
 echo -e "Total RAM   : ${totalram}MB"
 echo -e "Avaible     : ${MEMORY}MB"
-echo -e "Download    : $downloadsize GB ( From Startup / VPS Booting )"
-echo -e "Upload      : $uploadsize GB ( From Startup / VPS Booting )"
 echo -e "---------------------------------------------------------------------$wh"
 echo -e "Internet Service Provider Information :$y"
 echo -e "Public IP   : $IPVPS"
@@ -320,10 +318,8 @@ echo -e "V2Ray TLS   : $status_tls_v2ray"
 echo -e "V2Ray HTTP  : $status_nontls_v2ray"
 echo -e "Vless TLS   : $status_tls_vless"
 echo -e "Vless HTTP  : $status_nontls_vless"
-echo -e "SSR         : $status_ssr"
-echo -e "SS TLS      : $status_ss_tls"
 echo -e "SS HTTP     : $status_ss_http"
-echo -e "Trojan      : $status_virus_trojan"
+echo -e "Trojan      : $trojan_server"
 echo -e "Wireguard   : $status_wg"
 echo "------------------------------------------------------------------------
 "
