@@ -70,7 +70,7 @@ vless_tls_v2ray_status=$(systemctl status v2ray@vless | grep Active | awk '{prin
 vless_nontls_v2ray_status=$(systemctl status v2ray@vnone | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ssr_status=$(systemctl status ssrmu | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 status_virus_trojan=$(systemctl status v2ray@trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-trojan_service=$(systemctl status v2ray@trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trojan_server=$(systemctl status v2ray@trojan | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 stunnel_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -282,12 +282,12 @@ Domen="$(cat /etc/v2ray/domain)"
 
 # Echoing Result
 echo -e ""
-echo -e "$m---------------------------------------------------------------------$wh"
+echo -e "---------------------------------------------------------------------"
 echo -e "System Status / System Information :$y"
 echo -e "Uptime      : $uptime ( From VPS Booting )"
 echo -e "Total RAM   : ${totalram}MB"
 echo -e "Avaible     : ${MEMORY}MB"
-echo -e "---------------------------------------------------------------------$wh"
+echo -e "---------------------------------------------------------------------"
 echo -e "Internet Service Provider Information :$y"
 echo -e "Public IP   : $IPVPS"
 echo -e "Domain      : $Domen"
@@ -296,14 +296,14 @@ echo -e "Region      : $REGION "
 echo -e "Country     : $COUNTRY"
 echo -e "City        : $CITY "
 echo -e "Time Zone   : $WAKTUE"
-echo -e "---------------------------------------------------------------------$wh"
+echo -e "---------------------------------------------------------------------"
 echo -e "Time & Date & Location & Coordinate Information :$y"
 echo -e "Location    : $COUNTRY"
 echo -e "Coordinate  : $koordinat"
 echo -e "Time Zone   : $WAKTUE"
 echo -e "Date        : $harini"
 echo -e "Time        : $jam ( WIB )"
-echo -e "---------------------------------------------------------------------$wh"
+echo -e "---------------------------------------------------------------------"
 echo -e "System Status Information :"
 echo -e "SSH / Tun   : $status_ssh"
 echo -e "OpenVPN     : $status_openvpn"
