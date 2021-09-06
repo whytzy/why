@@ -13,7 +13,7 @@ echo -e "6.       : Delete SSH and OpenVPN accounts ( deluser }"
 echo -e "7.       : Auto Delete Multi Login User ( autokick ) "
 echo -e "8.       : Delete Expired SSH websocket & OpenVpn ( delete ) "
 echo -e "9.       : Check Multi Login User SSH & OpenVPN ( checklim ) "
-echo -e "10.     : Menu Restart All Service ( Restart )  
+echo -e "10.     : Menu Restart All Service ( Restart )  "
 echo -e ""
 echo -e ">> Menu V2ray / Vmess "
 echo -e ""
