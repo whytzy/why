@@ -104,6 +104,7 @@ echo -e "* about        : Informasi script autossh"
 echo -e ""
 echo -e "${RED}===============================================================${NC}"
 echo -e "${NC}"
+echo -e " x)   MENU"
 read -p "     Select From Options [1-8 or x] :  " menu
 echo -e   ""
 case $menu in
