@@ -244,11 +244,6 @@ webmin
 48)
 info
 ;;
-49)
-why
-;;
-why
-;;
 50)
 speedtest
 ;;
