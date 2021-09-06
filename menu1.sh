@@ -30,7 +30,7 @@ echo -e "17).   : Delete Acount Vless ( del-ws ) "
 echo -e "18).   : Extend Acount Vless ( renew-vless )"
 echo -e "19).   : Check User Login Vless ( cek-vless )"
 echo -e ""
-echo -e">> Menu TrojanGFW "
-echo -e""
+echo -e ">> Menu TrojanGFW "
+echo -e ""
 
 
