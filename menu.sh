@@ -33,8 +33,8 @@ echo -e "* menu         : List of Main Commands "
 echo -e ""
 echo -e "${RED}=========================-SSH & OpenVPN-========================${NC}"
 echo -e "${RED}========================-SSH & OpenVPN-============ ============${NC}"
-echo -e "${GREEN}* usernew     : Create SSH and OpenVPN account"
-echo -e "* trial             : Create SSH account and OpenVPN 24 Hour Trial"
+echo -e "1)${GREEN}* usernew     : Create SSH and OpenVPN account"
+echo -e "2)* trial             : Create SSH account and OpenVPN 24 Hour Trial"
 echo -e "* renew         : Extend SSH & OpenVPN Account Active Period"
 echo -e "* deluser       : Delete SSH and OpenVPN accounts"
 echo -e "* cek              : Check User Login SSH & OpenVPN"
@@ -111,7 +111,7 @@ case $menu in
 usernew
 ;;
 2)
-renew
+trial
 ;;
 3)
 deluser
